@@ -1,0 +1,600 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    background: linear-gradient(-45deg, #add1fa, #d8e5fd);
+    font-family: Helvetica, sans-serif;
+}
+
+header {
+    height: auto;
+    position: sticky;
+    top: 0;
+    /*border: 1px solid red;*/
+    z-index: 100;
+}
+
+nav {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 0 20px;
+    margin: 20px 60px;
+    font-weight: 400;
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* efek shadow nanti dibawah sini */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+nav ul.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 80px;
+}
+
+nav .navbar a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 200;
+    color: black;
+}
+
+nav .navbar>li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav .navbar>li>a {
+    position: relative;
+    margin: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Poppins;
+}
+
+#down-icon {
+    margin-top: 3px;
+}
+
+nav>#logo {
+    display: flex;
+    align-items: center;
+    line-height: 100%;
+}
+
+nav ul.utility {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+nav .utility a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 200;
+    color: black;
+}
+
+nav .utility>li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav .utility>li>a {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#login {
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    margin-right: 35px;
+    font-family: Poppins;
+}
+
+#signup {
+    background-color: rgb(44, 107, 224);
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: Poppins;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+}
+
+#signup:hover {
+    background-color: rgb(51, 51, 85);
+    color: white;
+}
+
+.jumbotron {
+    background: url(assets/canvas.svg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 600px;
+    width: 100%;
+    position: relative;
+    bottom: 40px;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero h1 {
+    text-align: center;
+    color: rgb(11, 11, 59);
+    font-weight: 600;
+    font-size: 60px;
+    margin-top: 120px;
+    line-height: 1.1;
+    font-family: Poppins;
+}
+
+.hero h4 {
+    color: darkslategray;
+    font-weight: 100;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+.btn-main {
+    background-color: rgb(44, 107, 224);
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+}
+
+.btn-main:hover {
+    background-color: rgb(51, 51, 85);
+    color: white;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 20px;
+    background-color: aliceblue;
+}
+
+section h3 {
+    font-size: 18px;
+    margin-top: 80px;
+    font-weight: 600;
+    text-align: center;
+    color: black;
+}
+
+section h1 {
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    color: black;
+    margin: 10px 0;
+}
+
+section>h4 {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    color: rgb(114, 114, 114);
+    margin-bottom: 30px;
+}
+
+section a.btn-main {
+    display: flex;
+    margin: 20px 600px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.card-1 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0 200px;
+}
+
+.card-white {
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+}
+
+.card-yellow {
+    background-color: darkorange;
+    border-radius: 25px;
+}
+
+.card-blue {
+    background: rgb(43, 121, 238);
+    border-radius: 25px;
+}
+
+.card-dark {
+    background: rgb(44, 44, 44);
+    border-radius: 25px;
+}
+
+.card-large {
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    overflow: hidden;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+    cursor: auto;
+}
+
+.card-large>ul {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+    flex: 1;
+    padding: 40px;
+}
+
+.card-large>ul>h2 {
+    font-size: 32px;
+    color: #fff;
+    margin-top: 60px;
+}
+
+.card-large>ul>h4 {
+    font-size: 16px;
+    font-weight: lighter;
+    color: #fff;
+}
+
+.card-large a.explore {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 100px;
+}
+
+.card-large a.more {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 50px;
+}
+
+.card-image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+}
+
+.card-image img {
+    width: 80%;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.card-image img.image-crypto {
+    width: 80%;
+    overflow: hidden;
+    margin-top: 80px;
+}
+
+#right-icon {
+    display: flex;
+    flex-direction: column;
+}
+
+.main .card-1 .card-large a {
+    position: relative;
+    display: flex;
+    font-family: Poppins;
+}
+
+.card-1 .card-large a>span {
+    display: flex;
+    justify-content: center;
+}
+
+.main .card-2 .card-med a {
+    position: relative;
+    display: flex;
+    font-family: Poppins;
+}
+
+.card-2 .card-med a>span {
+    display: flex;
+    justify-content: center;
+}
+
+.card-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: auto auto;
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+    margin: 24px 200px;
+}
+
+.card-med {
+    flex: 1;
+    /*    width: var(--nav-card-size);*/
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+    cursor: auto;
+}
+
+.card-large:hover {
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.15);
+    transform: scale(1.01);
+}
+
+.card-med:hover {
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.15);
+    transform: scale(1.01);
+}
+
+.card-white>ul {
+    /*    padding: 16px 0 24px;*/
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    /*    border: 1px solid blue;*/
+
+    padding: 40px;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.card-white>ul>h4 {
+    color: rgb(124, 124, 124);
+    line-height: 20px;
+    font-size: 14px;
+    padding-top: 10px;
+    /*    border: 1px solid red;*/
+}
+
+.card-yellow>ul {
+    /*    padding: 16px 0 24px;*/
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    /*    border: 1px solid blue;*/
+
+    padding: 40px;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.card-yellow>ul>h4 {
+    color: rgb(255, 255, 255);
+    line-height: 20px;
+    font-size: 14px;
+    padding-top: 10px;
+    /*    border: 1px solid red;*/
+}
+
+.card-yellow>ul>h1 {
+    color: rgb(255, 255, 255);
+    line-height: 20px;
+    font-size: 200px;
+    padding-top: 120px;
+    /*    border: 1px solid red;*/
+}
+
+.card-med>ul a {
+    text-decoration: none;
+    font-size: 14px;
+    /*    border: 1px solid red;*/
+}
+
+.card-white a.explore {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin-top: 50px;
+}
+
+.card-yellow a.explore {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin-top: 93px;
+}
+
+.card-blue>ul {
+    /*    padding: 16px 0 24px;*/
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    /*    border: 1px solid blue;*/
+
+    padding: 40px;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.card-blue>ul>h1 {
+    color: rgb(255, 255, 255);
+    font-size: 200px;
+    text-align: right;
+    /*    border: 1px solid red;*/
+}
+
+.card-blue>ul>h4 {
+    color: rgb(255, 255, 255);
+    line-height: 20px;
+    font-size: 14px;
+    padding-top: 10px;
+    /*    border: 1px solid red;*/
+}
+
+.card-blue a.explore {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.card-med-img img {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 35px;
+    width: 80%;
+    height: 80%;
+}
+
+.card-med-img img.gold {
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    margin: 20px 50px;
+}
+
+.card-white a.find-gold {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.footer {
+    background: rgb(44, 44, 44);
+    padding: 60px 60px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+}
+
+.footer li {
+    position: flex;
+    list-style-type: none;
+    color: #fff;
+}
+
+.footer li h5 {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-size: 13px;
+    font-weight: lighter;
+    line-height: 1.5;
+    margin: 15px 0;
+}
+
+.btn-footer {
+    position: relative;
+    display: inline-block;
+    background-color: rgb(44, 107, 224);
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+}
+
+.btn-footer:hover {
+    background-color: rgb(51, 51, 85);
+    color: white;
+}
+
+.foot-logo {
+    display: flex;
+    align-items: center;
+}
+
+ul.app {
+    color: #fff;
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+ul.app li {
+    font-weight: 100;
+    margin: 15px 0;
+}
+
+ul.app li.icons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    font-size: 24px;
+    grid-gap: 15px;
+}
+
+.nav-footer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    grid-gap: 25px;
+    margin-top: 35px;
+}
+
+.nav-footer a {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.footer .whiteline {
+    margin-top: 5px;
+    border-bottom: 0.5px solid #fff;
+}
+
+.footer .copyright {
+    display: flex;
+    align-items: center;
+    color: rgb(216, 216, 216);
+    font-size: 12px;
+    margin-top: 20px;
+}
